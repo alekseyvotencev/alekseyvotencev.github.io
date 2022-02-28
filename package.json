@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "choices.js": "^10.0.0",
+    "inputmask": "^5.0.7",
+    "just-validate": "^3.4.0",
+    "simplebar": "^5.3.6",
+    "swiper": "^8.0.5"
+  }
+}
