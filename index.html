@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="node_modules/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Blachard</title>
@@ -27,49 +26,78 @@
                     <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white" />
                 </svg>
 
-                <img src="img/logo.svg" alt="Логотип галереи" class="header__logo">
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__list-item">
-                            <a href="#about" class="header__link">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#gallery" class="header__link">
-                                Галерея
-                            </a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#catalog" class="header__link">
-                                Каталог
-                            </a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#events" class="header__link">
-                                События
-                            </a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#projects" class="header__link">
-                                Проекты
-                            </a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#contacts" class="header__link">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="#" class="header__login">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Поиск по сайту">
-                        <path
-                            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                            fill="white" />
-                    </svg>
-                    Войти</a>
+                <picture class="header__picture">
+                    <source media="(max-width: 585px)" srcset="img/logo-320.svg">
+                    <source media="(max-width: 768px)" srcset="img/logo-768.svg">
+                    <source media="(max-width: 1900px)" srcset="img/logo-1024.svg">
+                    <source media="(min-width: 1901px)" srcset="img/logo-1920.svg">
+                    <img srcset="img/logo-1920.svg, img/logo-1024.svg, img/logo-768.svg, img/logo-320.svg"
+                        alt="Логотип галереи" class="header__logo">
+                </picture>
+
+                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="header__search">
+                    <rect width="9.15446" height="2.28862"
+                        transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                        fill="white" />
+                </svg>
+
+                <div class="header__nav-container">
+                    <div class="container header__nav-container-mobile">
+                        <nav class="header__nav">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="header__cross">
+                                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)"
+                                    fill="white" />
+                                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)"
+                                    fill="white" />
+                            </svg>
+                            <ul class="header__list">
+                                <li class="header__list-item">
+                                    <a href="#about" class="header__link">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#gallery" class="header__link">
+                                        Галерея
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#catalog" class="header__link">
+                                        Каталог
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#events" class="header__link">
+                                        События
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#projects" class="header__link">
+                                        Проекты
+                                    </a>
+                                </li>
+                                <li class="header__list-item">
+                                    <a href="#contacts" class="header__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="header__login">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-label="Поиск по сайту">
+                                    <path
+                                        d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                                        fill="white" />
+                                </svg>
+                                Войти</a>
+                        </nav>
+                    </div>
+
+                </div>
             </header>
         </div>
     </div>
@@ -97,6 +125,10 @@
                                         <li class="hero___dropdown-list-item hero__dropdown-1-3">Леонардо</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-4">Верроккьо</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-1">Тинторетто</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-1-2">Фридрих</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-1-3">Леонардо</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-1-4">Верроккьо</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-1-1">Тинторетто</li>
                                     </ul>
                                 </div>
                             </li>
@@ -114,6 +146,9 @@
                                         <li class="hero___dropdown-list-item hero__dropdown-2-3">Мане</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-2-4">Ренуар</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-2-1">Моне</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-2-2">Сислей</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-2-3">Мане</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-2-4">Ренуар</li>
                                     </ul>
                                 </div>
                             </li>
@@ -131,6 +166,9 @@
                                         <li class="hero___dropdown-list-item hero__dropdown-3-3">Гоген</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-3-4">Сёра</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-3-1">Ван Гог</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-3-2">Сезанн</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-3-3">Гоген</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-3-4">Сёра</li>
                                     </ul>
                                 </div>
                             </li>
@@ -148,6 +186,9 @@
                                         <li class="hero___dropdown-list-item hero__dropdown-4-3">Малевич</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-4-4">Пикассо</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-4-1">Кандийский</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-4-2">Маринетти</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-4-3">Малевич</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-4-4">Пикассо</li>
                                     </ul>
                                 </div>
                             </li>
@@ -165,6 +206,9 @@
                                         <li class="hero___dropdown-list-item hero__dropdown-5-3">Северини</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-5-4">Балла</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-5-1">Карра</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-5-2">Прателла</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-5-3">Северини</li>
+                                        <li class="hero___dropdown-list-item hero__dropdown-5-4">Балла</li>
                                     </ul>
                                 </div>
                             </li>
@@ -221,7 +265,7 @@
                 <div class="gallery__container">
                     <div class="gallery__left">
                         <h3 class="section__heading gallery__heading">Галерея</h3>
-                        <span class="gallery__span">Фильтр</span>
+                        <span class="gallery__span">Фильтр:</span>
                         <select name="gallery__select" id="gallery__select" class="gallery__select">
                             <option value="" selected>Живопись</option>
                             <option value="">Рисунок</option>
@@ -247,60 +291,60 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-1__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-1__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-1__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-1__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-1__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-1__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-1__1920.png">
                                         <img srcset="img/gallery-1__1920.png, img/gallery-1__1024.png, img/gallery-1__768.png, img/gallery-1__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-2__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-2__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-2__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-2__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-2__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-2__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-2__1920.png">
                                         <img srcset="img/gallery-2__1920.png, img/gallery-2__1024.png, img/gallery-2__768.png, img/gallery-2__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-3__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-3__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-3__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-3__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-3__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-3__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-3__1920.png">
                                         <img srcset="img/gallery-3__1920.png, img/gallery-3__1024.png, img/gallery-3__768.png, img/gallery-3__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-4__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-4__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-4__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-4__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-4__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-4__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-4__1920.png">
                                         <img srcset="img/gallery-4__1920.png, img/gallery-4__1024.png, img/gallery-4__768.png, img/gallery-4__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-5__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-5__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-5__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-5__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-5__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-5__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-5__1920.png">
                                         <img srcset="img/gallery-5__1920.png, img/gallery-5__1024.png, img/gallery-5__768.png, img/gallery-5__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide swiper1-slide">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/gallery-6__320.png">
+                                        <source media="(max-width: 585px)" srcset="img/gallery-6__320.png">
                                         <source media="(max-width: 768px)" srcset="img/gallery-6__768.png">
-                                        <source media="(max-width: 1199px)" srcset="img/gallery-6__1024.png">
-                                        <source media="(min-width: 1200px)" srcset="img/gallery-6__1920.png">
+                                        <source media="(max-width: 1900px)" srcset="img/gallery-6__1024.png">
+                                        <source media="(min-width: 1901px)" srcset="img/gallery-6__1920.png">
                                         <img srcset="img/gallery-6__1920.png, img/gallery-6__1024.png, img/gallery-6__768.png, img/gallery-6__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
@@ -742,7 +786,14 @@
                     <div class="swiper swiper2">
                         <div class="swiper-wrapper swiper2-wrapper">
                             <div class="swiper-slide swiper2-slide">
-                                <img src="img/events__1-1920.png" alt="">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/events__1-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/events__1-768.png">
+                                    <source media="(max-width: 1024px)" srcset="img/events__1-1024.png">
+                                    <source media="(min-width: 1025px)" srcset="img/events__1-1920.png">
+                                    <img srcset="img/events__1-1920.png, img/events__1-1024.png, img/events__1-768.png, img/events__1-320.png"
+                                        alt="" class="events__swiper-img">
+                                </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">Музей им. Щусева<br>с 20 марта по 30
@@ -759,7 +810,14 @@
                             </div>
 
                             <div class="swiper-slide swiper2-slide">
-                                <img src="img/events__2-1920.png" alt="">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/events__2-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/events__2-768.png">
+                                    <source media="(max-width: 1024px)" srcset="img/events__2-1024.png">
+                                    <source media="(min-width: 1025px)" srcset="img/events__2-1920.png">
+                                    <img srcset="img/events__2-1920.png, img/events__2-1024.png, img/events__2-768.png, img/events__2-320.png"
+                                        alt="" class="events__swiper-img">
+                                </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">ММОМА<br>24 марта 19:00</span>
@@ -773,7 +831,14 @@
                             </div>
 
                             <div class="swiper-slide swiper2-slide">
-                                <img src="img/events__3-1920.png" alt="">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/events__3-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/events__3-768.png">
+                                    <source media="(max-width: 1024px)" srcset="img/events__3-1024.png">
+                                    <source media="(min-width: 1025px)" srcset="img/events__3-1920.png">
+                                    <img srcset="img/events__3-1920.png, img/events__3-1024.png, img/events__3-768.png, img/events__3-320.png"
+                                        alt="" class="events__swiper-img">
+                                </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">Еврейский музей<br>с 31 марта по 21
@@ -788,7 +853,14 @@
                             </div>
 
                             <div class="swiper-slide swiper2-slide">
-                                <img src="img/events__4-1920.png" alt="">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/events__4-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/events__4-768.png">
+                                    <source media="(max-width: 1200px)" srcset="img/events__4-1024.png">
+                                    <source media="(min-width: 1201px)" srcset="img/events__4-1920.png">
+                                    <img srcset="img/events__4-1920.png, img/events__4-1024.png, img/events__4-768.png, img/events__4-320.png"
+                                        alt="" class="events__swiper-img">
+                                </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">ММОМА<br>c 8 апреля по 20 мая</span>
@@ -804,7 +876,14 @@
                             </div>
 
                             <div class="swiper-slide swiper2-slide">
-                                <img src="img/events__5-1920.png" alt="">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/events__5-320.png">
+                                    <source media="(max-width: 1199px)" srcset="img/events__5-768.png">
+                                    <source media="(max-width: 1200px)" srcset="img/events__5-1024.png">
+                                    <source media="(min-width: 1201px)" srcset="img/events__5-1920.png">
+                                    <img srcset="img/events__5-1920.png, img/events__5-1024.png, img/events__5-768.png, img/events__5-320.png"
+                                        alt="" class="events__swiper-img">
+                                </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">Третьяковка на Крымском валу<br>с 30 марта по
@@ -830,11 +909,12 @@
                             </g>
                         </svg>
                     </div>
+                    <div class="swiper-pagination swiper2-pagination"></div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section section__projects">
             <div class="container">
                 <h3 class="section__heading">Проекты</h3>
                 <p class="section__description projects__description">Предварительные выводы: постоянное
@@ -914,31 +994,94 @@
                     <div class="swiper swiper3">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-1.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-1-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-1-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-1-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-1-1920.png">
+                                    <img srcset="img/projects__partners-1-1920.png, img/projects__partners-1-1024.png, img/projects__partners-1-768.png, img/projects__partners-1-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-2.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-2-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-2-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-2-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-2-1920.png">
+                                    <img srcset="img/projects__partners-2-1920.png, img/projects__partners-2-1024.png, img/projects__partners-2-768.png, img/projects__partners-2-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-3.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-3-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-3-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-3-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-3-1920.png">
+                                    <img srcset="img/projects__partners-3-1920.png, img/projects__partners-3-1024.png, img/projects__partners-3-768.png, img/projects__partners-3-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-4.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-4-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-4-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-4-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-4-1920.png">
+                                    <img srcset="img/projects__partners-4-1920.png, img/projects__partners-4-1024.png, img/projects__partners-4-768.png, img/projects__partners-4-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-5.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-5-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-5-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-5-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-5-1920.png">
+                                    <img srcset="img/projects__partners-5-1920.png, img/projects__partners-5-1024.png, img/projects__partners-5-768.png, img/projects__partners-5-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-6.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-6-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-6-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-6-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-6-1920.png">
+                                    <img srcset="img/projects__partners-6-1920.png, img/projects__partners-6-1024.png, img/projects__partners-6-768.png, img/projects__partners-6-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-7.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-7-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-7-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-7-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-7-1920.png">
+                                    <img srcset="img/projects__partners-7-1920.png, img/projects__partners-7-1024.png, img/projects__partners-7-768.png, img/projects__partners-7-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-8.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-8-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-8-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-8-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-8-1920.png">
+                                    <img srcset="img/projects__partners-8-1920.png, img/projects__partners-8-1024.png, img/projects__partners-8-768.png, img/projects__partners-8-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                             <div class="swiper-slide swiper3-slide">
-                                <img src="img/projects__partners-9.png" alt="" class="projects__partner">
+                                <picture class="projects__partner">
+                                    <source media="(max-width: 738px)" srcset="img/projects__partners-9-320.png">
+                                    <source media="(max-width: 768px)" srcset="img/projects__partners-9-768.png">
+                                    <source media="(max-width: 1799px)" srcset="img/projects__partners-9-1024.png">
+                                    <source media="(min-width: 1800px)" srcset="img/projects__partners-9-1920.png">
+                                    <img srcset="img/projects__partners-9-1920.png, img/projects__partners-9-1024.png, img/projects__partners-9-768.png, img/projects__partners-9-320.png"
+                                        alt="">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -1019,13 +1162,20 @@
             </div>
         </section>
 
-        <div id="custom__map" style="width: 100%; height: 700px" class="custom__map"></div>
+        <div id="custom__map" class="custom__map"></div>
     </main>
 
     <footer class="footer__container">
         <div class="container">
             <div class="footer">
-                <img src="img/logo.svg" alt="Логотип">
+                <picture class="header__picture">
+                    <source media="(max-width: 575px)" srcset="img/logo-320.svg">
+                    <source media="(max-width: 768px)" srcset="img/logo-768.svg">
+                    <source media="(max-width: 1900px)" srcset="img/logo-1024.svg">
+                    <source media="(min-width: 1901px)" srcset="img/logo-1920.svg">
+                    <img srcset="img/logo-1920.svg, img/logo-1024.svg, img/logo-768.svg, img/logo-320.svg"
+                        alt="Логотип галереи" class="footer__logo">
+                </picture>
                 <div class="footer__social">
 
                     <a href="#" class="footer__social-link" aria-label="Мы в Вконтакте">
