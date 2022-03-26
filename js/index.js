@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // header search
+
+  document.querySelector('.header__search').addEventListener('click', function () {
+    if (document.documentElement.scrollWidth <= 985) {
+      document.querySelector('.header__burger').style.opacity = '0';
+      document.querySelector('.header__picture').style.opacity = '0';
+    }
+    document.querySelector('.header__search-container').classList.add('header__search-container--active');
+    document.querySelector('.header__search-input').classList.add('header__search-input--active');
+    document.querySelector('.header__search-cross').classList.add('header__search--active');
+
+  });
+  document.querySelector('.header__search-cross').addEventListener('click', function () {
+    if (document.documentElement.scrollWidth <= 985) {
+      document.querySelector('.header__burger').style.opacity = '1';
+      document.querySelector('.header__picture').style.opacity = '1';
+    }
+    this.classList.remove('header__search--active');
+    document.querySelector('.header__search-input').classList.add('header__search--display');
+    document.querySelector('.header__search-container').classList.remove('header__search-container--active');
+    document.querySelector('.header__search-input').classList.remove('header__search-input--active');
+  });
+
   // scrollbar (hero menu)
 
   document.querySelectorAll('.hero__container-dropdown').forEach(item => {
