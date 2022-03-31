@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <div class="container__header">
+    <div class="header">
         <div class="container">
-            <header class="header">
+            <header class="header__block">
 
                 <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="header__burger">
@@ -31,8 +31,7 @@
                     <source media="(max-width: 768px)" srcset="img/logo-768.svg">
                     <source media="(max-width: 1900px)" srcset="img/logo-1024.svg">
                     <source media="(min-width: 1901px)" srcset="img/logo-1920.svg">
-                    <img srcset="img/logo-1920.svg, img/logo-1024.svg, img/logo-768.svg, img/logo-320.svg"
-                        alt="Логотип галереи" class="header__logo">
+                    <img src="img/logo-1920.svg,%20img/logo-1024.svg,%20img/logo-768.svg,%20img/logo-320.svg" alt="Логотип галереи" class="header__logo">
                 </picture>
 
                 <div class="header__search-container">
@@ -44,7 +43,7 @@
                             d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
                             fill="white" />
                     </svg>
-                    <input type="search" placeholder="" class="hero__search-input header__search-input">
+                    <input type="search" placeholder="" class="header__search-input">
                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="header__search-cross">
                         <rect width="29.567" height="2.9567"
@@ -114,8 +113,8 @@
 
 
     <main>
-        <section class="section__hero">
-            <div class="container__hero">
+        <section class="hero">
+            <div class="hero__container">
                 <div class="container">
                     <div class="hero__menu">
                         <ul class="hero__list">
@@ -128,17 +127,14 @@
                                     </svg>
 
                                 </button>
-                                <div class="hero__container-dropdown" data-simplebar>
-                                    <ul class="hero___dropdown-list">
+                                <div class="hero__container-dropdown">
+                                    <ul class="hero___dropdown-list" data-simplebar>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-1">Тинторетто</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-2">Фридрих</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-3">Леонардо</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-4">Верроккьо</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-1">Тинторетто</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-1-2">Фридрих</li>
-                                        <li class="hero___dropdown-list-item hero__dropdown-1-3">Леонардо</li>
-                                        <li class="hero___dropdown-list-item hero__dropdown-1-4">Верроккьо</li>
-                                        <li class="hero___dropdown-list-item hero__dropdown-1-1">Тинторетто</li>
                                     </ul>
                                 </div>
                             </li>
@@ -149,8 +145,8 @@
                                         <path d="M11 1L6 6L1 1" stroke="white" />
                                     </svg>
                                 </button>
-                                <div class="hero__container-dropdown" data-simplebar>
-                                    <ul class="hero___dropdown-list">
+                                <div class="hero__container-dropdown">
+                                    <ul class="hero___dropdown-list" data-simplebar>
                                         <li class="hero___dropdown-list-item hero__dropdown-2-1">Моне</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-2-2">Сислей</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-2-3">Мане</li>
@@ -169,8 +165,8 @@
                                         <path d="M11 1L6 6L1 1" stroke="white" />
                                     </svg>
                                 </button>
-                                <div class="hero__container-dropdown" data-simplebar>
-                                    <ul class="hero___dropdown-list">
+                                <div class="hero__container-dropdown">
+                                    <ul class="hero___dropdown-list" data-simplebar>
                                         <li class="hero___dropdown-list-item hero__dropdown-3-1">Ван Гог</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-3-2">Сезанн</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-3-3">Гоген</li>
@@ -189,8 +185,8 @@
                                         <path d="M11 1L6 6L1 1" stroke="white" />
                                     </svg>
                                 </button>
-                                <div class="hero__container-dropdown" data-simplebar>
-                                    <ul class="hero___dropdown-list">
+                                <div class="hero__container-dropdown">
+                                    <ul class="hero___dropdown-list" data-simplebar>
                                         <li class="hero___dropdown-list-item hero__dropdown-4-1">Кандийский</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-4-2">Маринетти</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-4-3">Малевич</li>
@@ -209,8 +205,8 @@
                                         <path d="M11 1L6 6L1 1" stroke="white" />
                                     </svg>
                                 </button>
-                                <div class="hero__container-dropdown" data-simplebar>
-                                    <ul class="hero___dropdown-list">
+                                <div class="hero__container-dropdown">
+                                    <ul class="hero___dropdown-list" data-simplebar>
                                         <li class="hero___dropdown-list-item hero__dropdown-5-1">Карра</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-5-2">Прателла</li>
                                         <li class="hero___dropdown-list-item hero__dropdown-5-3">Северини</li>
@@ -226,7 +222,7 @@
                         <div class="hero__search">
                             <button class="hero__search-btn">
                                 <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    xmlns="http://www.w3.org/2000/svg ">
                                     <rect width="6.8678" height="1.71695"
                                         transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
                                         fill="white" />
@@ -242,7 +238,7 @@
             </div>
 
             <div class="container">
-                <h2 class="hero__heading">Прикоснитесь к прекрасному</h2>
+                <h1 class="hero__heading">Прикоснитесь к прекрасному</h1>
                 <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
                     заданий создаёт предпосылки
                     для
@@ -251,9 +247,9 @@
             </div>
         </section>
 
-        <section id="about" class="section section__about">
+        <section id="about" class="section about">
             <div class="container">
-                <h3 class="section__heading about__heading">О нас</h3>
+                <h2 class="section__heading about__heading">О нас</h2>
                 <p class="section__description"> Ясность нашей позиции очевидна: семантический разбор внешних
                     противодействий однозначно определяет
                     каждого участника как способного принимать собственные решения касаемо распределения внутренних
@@ -270,11 +266,11 @@
 
         </section>
 
-        <section id="gallery" class="section section__gallery">
+        <section id="gallery" class="section gallery">
             <div class="container">
                 <div class="gallery__container">
                     <div class="gallery__left">
-                        <h3 class="section__heading gallery__heading">Галерея</h3>
+                        <h2 class="section__heading gallery__heading">Галерея</h2>
                         <span class="gallery__span">Фильтр:</span>
                         <select name="gallery__select" id="gallery__select" class="gallery__select">
                             <option value="" selected>Живопись</option>
@@ -282,7 +278,7 @@
                             <option value="">Скульптура</option>
                         </select>
                         <div class="gallery__checkboxes">
-                            <label for="checkboxes-1" class="gallery__label">
+                            <label for="checkboxes-1" class="gallery__label" tabindex="0">
                                 <input type="checkbox" id="checkboxes-1" class="gallery__checkbox">
                                 <span class="gallery__span">XIX век</span>
                             </label>
@@ -305,7 +301,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-1__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-1__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-1__1920.png">
-                                        <img srcset="img/gallery-1__1920.png, img/gallery-1__1024.png, img/gallery-1__768.png, img/gallery-1__320.png"
+                                        <img src="img/gallery-1__1920.png,%20img/gallery-1__1024.png,%20img/gallery-1__768.png,%20img/gallery-1__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -315,7 +311,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-2__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-2__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-2__1920.png">
-                                        <img srcset="img/gallery-2__1920.png, img/gallery-2__1024.png, img/gallery-2__768.png, img/gallery-2__320.png"
+                                        <img src="img/gallery-2__1920.png,%20img/gallery-2__1024.png,%20img/gallery-2__768.png,%20img/gallery-2__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -325,7 +321,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-3__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-3__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-3__1920.png">
-                                        <img srcset="img/gallery-3__1920.png, img/gallery-3__1024.png, img/gallery-3__768.png, img/gallery-3__320.png"
+                                        <img src="img/gallery-3__1920.png,%20img/gallery-3__1024.png,%20img/gallery-3__768.png,%20img/gallery-3__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -335,7 +331,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-4__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-4__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-4__1920.png">
-                                        <img srcset="img/gallery-4__1920.png, img/gallery-4__1024.png, img/gallery-4__768.png, img/gallery-4__320.png"
+                                        <img src="img/gallery-4__1920.png,%20img/gallery-4__1024.png,%20img/gallery-4__768.png,%20img/gallery-4__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -345,7 +341,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-5__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-5__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-5__1920.png">
-                                        <img srcset="img/gallery-5__1920.png, img/gallery-5__1024.png, img/gallery-5__768.png, img/gallery-5__320.png"
+                                        <img src="img/gallery-5__1920.png,%20img/gallery-5__1024.png,%20img/gallery-5__768.png,%20img/gallery-5__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -355,7 +351,7 @@
                                         <source media="(max-width: 768px)" srcset="img/gallery-6__768.png">
                                         <source media="(max-width: 1900px)" srcset="img/gallery-6__1024.png">
                                         <source media="(min-width: 1901px)" srcset="img/gallery-6__1920.png">
-                                        <img srcset="img/gallery-6__1920.png, img/gallery-6__1024.png, img/gallery-6__768.png, img/gallery-6__320.png"
+                                        <img src="img/gallery-6__1920.png,%20img/gallery-6__1024.png,%20img/gallery-6__768.png,%20img/gallery-6__320.png"
                                             alt="" class="gallery__image">
                                     </picture>
                                 </div>
@@ -390,9 +386,9 @@
 
         </section>
 
-        <section id="catalog" class="section section__catalog">
+        <section id="catalog" class="section catalog">
             <div class="container">
-                <h3 class="section__heading catalog__heading">Каталог</h3>
+                <h2 class="section__heading catalog__heading">Каталог</h2>
                 <p class="section__description catalog__description">Акционеры крупнейших компаний, которые представляют
                     собой яркий пример континентально-европейского
                     типа
@@ -468,7 +464,7 @@
                                     d="M305.303 240.131C304.719 239.554 304.126 238.967 303.549 238.361C303.548 238.36 303.547 238.36 303.547 238.359C303.546 238.359 303.546 238.359 303.546 238.358C301.134 235.835 299.527 233.536 299.527 230.528C299.527 226.53 297.453 225.433 296.215 225.136C291.307 223.894 285.561 233.525 282.574 239.348C280.779 242.847 278.637 247.746 278.637 251.209C278.637 257.315 282.005 262.599 286.945 265.459L285.124 305.882C284.976 309.148 286.12 312.308 288.261 314.545C290.13 316.502 292.582 317.578 295.163 317.578C297.744 317.578 300.196 316.502 302.064 314.545C304.206 312.308 305.349 309.149 305.201 305.882L303.381 265.459C308.321 262.598 311.689 257.314 311.689 251.209C311.688 246.455 308.295 243.094 305.303 240.131ZM293.564 233.622C294.148 236.256 295.43 238.447 296.914 240.333C295.802 241.16 294.704 241.596 293.632 241.639C292.188 241.633 290.621 240.966 289.342 240.041C290.866 237.334 292.363 235.15 293.564 233.622ZM298.914 306.165C298.985 307.722 298.475 309.195 297.517 310.196C297.043 310.694 296.248 311.284 295.163 311.284C294.078 311.284 293.282 310.694 292.809 310.196C291.85 309.195 291.34 307.722 291.411 306.165L293.151 267.531C293.818 267.613 294.474 267.735 295.163 267.735C295.852 267.735 296.508 267.614 297.175 267.531L298.914 306.165ZM295.162 261.442C289.52 261.442 284.929 256.851 284.929 251.209C284.929 250.317 285.396 248.42 286.55 245.686C288.815 247.136 291.12 247.936 293.447 247.936C293.589 247.936 293.73 247.932 293.874 247.926C296.451 247.827 298.909 246.815 301.216 244.941C303.49 247.2 305.395 249.181 305.395 251.208C305.395 256.851 300.804 261.442 295.162 261.442Z"
                                     fill="#B6B6B6" />
                             </svg>
-                            <h3 class="catalog__artist-name">Что мы о нём знаем?</h3>
+                            <p class="catalog__artist-name">Что мы о нём знаем?</p>
                             <p class="catalog__artist-description">Пока ничего... Зато мы точно знаем, что в галерее
                                 есть на что посмотреть!</p>
                             <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -480,7 +476,7 @@
                         <ul class="accordion">
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1400 по 1499 гг.</h3>
+                                    <h4>C 1400 по 1499 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -614,7 +610,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1500 по 1599 гг.</h3>
+                                    <h4>C 1500 по 1599 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -631,7 +627,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -641,7 +637,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1600 по 1699 гг.</h3>
+                                    <h4>C 1600 по 1699 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -658,7 +654,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -668,7 +664,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1700 по 1799 гг.</h3>
+                                    <h4>C 1700 по 1799 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -685,7 +681,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -695,7 +691,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1800 по 1899 гг.</h3>
+                                    <h4>C 1800 по 1899 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -712,7 +708,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -722,7 +718,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 1900 по 1999 гг.</h3>
+                                    <h4>C 1900 по 1999 гг.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -739,7 +735,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -749,7 +745,7 @@
                             </li>
                             <li class="catalog__accordion-item">
                                 <div class="catalog__accordion-title">
-                                    <h3>C 2000 г.</h3>
+                                    <h4>C 2000 г.</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -766,7 +762,7 @@
                                         <rect x="12" y="12" width="251" height="165" fill="#B7B7B7" />
                                     </svg>
                                     <div class="catalog__empty-content">
-                                        <h4 class="catalog__empty-title">Здесь пока пусто</h4>
+                                        <p class="catalog__empty-title">Здесь пока пусто</p>
                                         <p class="catalog__empty-description">А в галерее вы всегда можете найти что-то
                                             интересное для себя</p>
                                         <a href="#gallery" class="catalog__empty-link" style="color:#9D5CD0;">В
@@ -780,9 +776,9 @@
             </div>
         </section>
 
-        <section id="events" class="section section__events">
+        <section id="events" class="section events">
             <div class="container">
-                <h3 class="section__heading">События</h3>
+                <h2 class="section__heading">События</h2>
                 <div class="swiper2-wrap">
                     <div class="swiper-button-prev swiper2-button-prev">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -801,14 +797,14 @@
                                     <source media="(max-width: 768px)" srcset="img/events__1-768.png">
                                     <source media="(max-width: 1024px)" srcset="img/events__1-1024.png">
                                     <source media="(min-width: 1025px)" srcset="img/events__1-1920.png">
-                                    <img srcset="img/events__1-1920.png, img/events__1-1024.png, img/events__1-768.png, img/events__1-320.png"
+                                    <img src="img/events__1-1920.png,%20img/events__1-1024.png,%20img/events__1-768.png,%20img/events__1-320.png"
                                         alt="" class="events__swiper-img">
                                 </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">Музей им. Щусева<br>с 20 марта по 30
                                             апреля</span>
-                                        <h4 class="events__name">Книжная гравюра в живом восприятии</h4>
+                                        <h3 class="events__name">Книжная гравюра в живом восприятии</h3>
                                         <p class="events__description">Один из ведущих флорентийских художников
                                             Кватроченто,
                                             основатель
@@ -825,14 +821,14 @@
                                     <source media="(max-width: 768px)" srcset="img/events__2-768.png">
                                     <source media="(max-width: 1024px)" srcset="img/events__2-1024.png">
                                     <source media="(min-width: 1025px)" srcset="img/events__2-1920.png">
-                                    <img srcset="img/events__2-1920.png, img/events__2-1024.png, img/events__2-768.png, img/events__2-320.png"
+                                    <img src="img/events__2-1920.png,%20img/events__2-1024.png,%20img/events__2-768.png,%20img/events__2-320.png"
                                         alt="" class="events__swiper-img">
                                 </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">ММОМА<br>24 марта 19:00</span>
-                                        <h4 class="events__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                                        </h4>
+                                        <h3 class="events__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                                        </h3>
                                         <p class="events__description">Высокий уровень вовлечения представителей целевой
                                             аудитории является четким доказательством простого факта.</p>
                                     </div>
@@ -846,14 +842,14 @@
                                     <source media="(max-width: 768px)" srcset="img/events__3-768.png">
                                     <source media="(max-width: 1024px)" srcset="img/events__3-1024.png">
                                     <source media="(min-width: 1025px)" srcset="img/events__3-1920.png">
-                                    <img srcset="img/events__3-1920.png, img/events__3-1024.png, img/events__3-768.png, img/events__3-320.png"
+                                    <img src="img/events__3-1920.png,%20img/events__3-1024.png,%20img/events__3-768.png,%20img/events__3-320.png"
                                         alt="" class="events__swiper-img">
                                 </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">Еврейский музей<br>с 31 марта по 21
                                             апреля</span>
-                                        <h4 class="events__name">Выставка «Формация 2020»</h4>
+                                        <h3 class="events__name">Выставка «Формация 2020»</h3>
                                         <p class="events__description">Идейные соображения высшего порядка, а также
                                             современная методология разработки играет важную роль в формировании
                                             глубокомысленных рассуждений.</p>
@@ -868,14 +864,14 @@
                                     <source media="(max-width: 768px)" srcset="img/events__4-768.png">
                                     <source media="(max-width: 1200px)" srcset="img/events__4-1024.png">
                                     <source media="(min-width: 1201px)" srcset="img/events__4-1920.png">
-                                    <img srcset="img/events__4-1920.png, img/events__4-1024.png, img/events__4-768.png, img/events__4-320.png"
+                                    <img src="img/events__4-1920.png,%20img/events__4-1024.png,%20img/events__4-768.png,%20img/events__4-320.png"
                                         alt="" class="events__swiper-img">
                                 </picture>
                                 <div class="events__arcticle">
                                     <div class="events__testimonial">
                                         <span class="events__date-place">ММОМА<br>c 8 апреля по 20 мая</span>
-                                        <h4 class="events__name">Джон Винзор. Фотографии из серии «Метафора серебра»
-                                        </h4>
+                                        <h3 class="events__name">Джон Винзор. Фотографии из серии «Метафора серебра»
+                                        </h3>
                                         <p class="events__description">Один из ведущих флорентийских художников
                                             Кватроченто,
                                             основатель художественной династии, которую продолжили его брат Давид и сын
@@ -891,7 +887,7 @@
                                     <source media="(max-width: 1199px)" srcset="img/events__5-768.png">
                                     <source media="(max-width: 1200px)" srcset="img/events__5-1024.png">
                                     <source media="(min-width: 1201px)" srcset="img/events__5-1920.png">
-                                    <img srcset="img/events__5-1920.png, img/events__5-1024.png, img/events__5-768.png, img/events__5-320.png"
+                                    <img src="img/events__5-1920.png,%20img/events__5-1024.png,%20img/events__5-768.png,%20img/events__5-320.png"
                                         alt="" class="events__swiper-img">
                                 </picture>
                                 <div class="events__arcticle">
@@ -899,7 +895,7 @@
                                         <span class="events__date-place">Третьяковка на Крымском валу<br>с 30 марта по
                                             30
                                             апреля</span>
-                                        <h4 class="events__name">XXIV Международная биеннале молодого искусства</h4>
+                                        <h3 class="events__name">XXIV Международная биеннале молодого искусства</h3>
                                         <p class="events__description">Внезапно, реплицированные с зарубежных
                                             источников,
                                             современные исследования.</p>
@@ -924,9 +920,9 @@
             </div>
         </section>
 
-        <section id="projects" class="section section__projects">
+        <section id="projects" class="section projects">
             <div class="container">
-                <h3 class="section__heading">Проекты</h3>
+                <h2 class="section__heading">Проекты</h2>
                 <p class="section__description projects__description">Предварительные выводы: постоянное
                     информационно-пропагандистское
                     обеспечение нашей деятельности
@@ -987,7 +983,7 @@
                     </span>
 
                 </p>
-                <h4 class="projects__subheading">Партнеры проектов:</h4>
+                <h3 class="projects__subheading">Партнеры проектов:</h3>
 
                 <div class="swiper3-wrap">
                     <div class="swiper-button-prev swiper3-button-prev">
@@ -1003,96 +999,96 @@
                     </div>
                     <div class="swiper swiper3">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper3-slide">
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-1-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-1-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-1-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-1-1920.png">
-                                    <img srcset="img/projects__partners-1-1920.png, img/projects__partners-1-1024.png, img/projects__partners-1-768.png, img/projects__partners-1-320.png"
+                                    <img src="img/projects__partners-1-1920.png,%20img/projects__partners-1-1024.png,%20img/projects__partners-1-768.png,%20img/projects__partners-1-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-2-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-2-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-2-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-2-1920.png">
-                                    <img srcset="img/projects__partners-2-1920.png, img/projects__partners-2-1024.png, img/projects__partners-2-768.png, img/projects__partners-2-320.png"
+                                    <img src="img/projects__partners-2-1920.png,%20img/projects__partners-2-1024.png,%20img/projects__partners-2-768.png,%20img/projects__partners-2-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-3-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-3-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-3-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-3-1920.png">
-                                    <img srcset="img/projects__partners-3-1920.png, img/projects__partners-3-1024.png, img/projects__partners-3-768.png, img/projects__partners-3-320.png"
+                                    <img src="img/projects__partners-3-1920.png,%20img/projects__partners-3-1024.png,%20img/projects__partners-3-768.png,%20img/projects__partners-3-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-4-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-4-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-4-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-4-1920.png">
-                                    <img srcset="img/projects__partners-4-1920.png, img/projects__partners-4-1024.png, img/projects__partners-4-768.png, img/projects__partners-4-320.png"
+                                    <img src="img/projects__partners-4-1920.png,%20img/projects__partners-4-1024.png,%20img/projects__partners-4-768.png,%20img/projects__partners-4-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-5-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-5-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-5-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-5-1920.png">
-                                    <img srcset="img/projects__partners-5-1920.png, img/projects__partners-5-1024.png, img/projects__partners-5-768.png, img/projects__partners-5-320.png"
+                                    <img src="img/projects__partners-5-1920.png,%20img/projects__partners-5-1024.png,%20img/projects__partners-5-768.png,%20img/projects__partners-5-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-6-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-6-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-6-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-6-1920.png">
-                                    <img srcset="img/projects__partners-6-1920.png, img/projects__partners-6-1024.png, img/projects__partners-6-768.png, img/projects__partners-6-320.png"
+                                    <img src="img/projects__partners-6-1920.png,%20img/projects__partners-6-1024.png,%20img/projects__partners-6-768.png,%20img/projects__partners-6-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-7-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-7-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-7-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-7-1920.png">
-                                    <img srcset="img/projects__partners-7-1920.png, img/projects__partners-7-1024.png, img/projects__partners-7-768.png, img/projects__partners-7-320.png"
+                                    <img src="img/projects__partners-7-1920.png,%20img/projects__partners-7-1024.png,%20img/projects__partners-7-768.png,%20img/projects__partners-7-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-8-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-8-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-8-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-8-1920.png">
-                                    <img srcset="img/projects__partners-8-1920.png, img/projects__partners-8-1024.png, img/projects__partners-8-768.png, img/projects__partners-8-320.png"
+                                    <img src="img/projects__partners-8-1920.png,%20img/projects__partners-8-1024.png,%20img/projects__partners-8-768.png,%20img/projects__partners-8-320.png"
                                         alt="">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide swiper3-slide">
+                            </a>
+                            <a href="#" class="swiper-slide swiper3-slide">
                                 <picture class="projects__partner">
                                     <source media="(max-width: 738px)" srcset="img/projects__partners-9-320.png">
                                     <source media="(max-width: 768px)" srcset="img/projects__partners-9-768.png">
                                     <source media="(max-width: 1799px)" srcset="img/projects__partners-9-1024.png">
                                     <source media="(min-width: 1800px)" srcset="img/projects__partners-9-1920.png">
-                                    <img srcset="img/projects__partners-9-1920.png, img/projects__partners-9-1024.png, img/projects__partners-9-768.png, img/projects__partners-9-320.png"
+                                    <img src="img/projects__partners-9-1920.png,%20img/projects__partners-9-1024.png,%20img/projects__partners-9-768.png,%20img/projects__partners-9-320.png"
                                         alt="">
                                 </picture>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-button-next swiper3-button-next">
@@ -1110,11 +1106,11 @@
             </div>
         </section>
 
-        <section id="contacts" class="section section__contacts">
+        <section id="contacts" class="section contacts">
             <div class="container">
                 <div class="container__contacts">
                     <div class="contacts__address-container">
-                        <h4 class="contacts__address-name">Шоурум №4</h4>
+                        <h2 class="contacts__address-name">Шоурум №4</h2>
                         <span class="contacts__address">Леонтьевский переулок, дом 5/1</span>
                     </div>
                     <form action="#" id="contacts__form" class="contacts__form">
@@ -1172,18 +1168,18 @@
             </div>
         </section>
 
-        <div id="custom__map" class="custom__map"></div>
+        <div id="custom__map" class="map"></div>
     </main>
 
-    <footer class="footer__container">
+    <footer class="footer">
         <div class="container">
-            <div class="footer">
-                <picture class="header__picture">
+            <div class="footer__block">
+                <picture class="footer__picture">
                     <source media="(max-width: 575px)" srcset="img/logo-320.svg">
                     <source media="(max-width: 768px)" srcset="img/logo-768.svg">
                     <source media="(max-width: 1900px)" srcset="img/logo-1024.svg">
                     <source media="(min-width: 1901px)" srcset="img/logo-1920.svg">
-                    <img srcset="img/logo-1920.svg, img/logo-1024.svg, img/logo-768.svg, img/logo-320.svg"
+                    <img src="img/logo-1920.svg,%20img/logo-1024.svg,%20img/logo-768.svg,%20img/logo-320.svg"
                         alt="Логотип галереи" class="footer__logo">
                 </picture>
                 <div class="footer__social">

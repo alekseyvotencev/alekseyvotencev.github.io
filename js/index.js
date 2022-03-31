@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // scrollbar (hero menu)
 
-  document.querySelectorAll('.hero__container-dropdown').forEach(item => {
+  document.querySelectorAll('.hero___dropdown-list').forEach(item => {
     new SimpleBar(item, {
       autoHide: false,
       scrollbarMaxSize: 28,
@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.classList.toggle('header__burger--inactive');
     burgerMenu.classList.toggle('header__nav-container--active');
   });
-
 
   // hero menu buttons 
 
@@ -150,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navigation: {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev',
+      disabledClass: 'swiper2-button-disabled',
     },
 
     pagination: {
