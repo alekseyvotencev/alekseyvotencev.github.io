@@ -2,25 +2,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // header search
 
+  const burger = document.querySelector('.header__burger');
+  const headerPicture = document.querySelector('.header__picture');
+  const headerSearchCross = document.querySelector('.header__search-cross');
   document.querySelector('.header__search').addEventListener('click', function () {
-    if (document.documentElement.scrollWidth <= 985) {
-      document.querySelector('.header__burger').style.opacity = '0';
-      document.querySelector('.header__picture').style.opacity = '0';
+    if (document.documentElement.scrollWidth <= 992) {
+      burger.style.display = 'none';
+      headerPicture.style.display = 'none';
     }
     document.querySelector('.header__search-container').classList.add('header__search-container--active');
-    document.querySelector('.header__search-input').classList.add('header__search-input--active');
-    document.querySelector('.header__search-cross').classList.add('header__search--active');
-
   });
-  document.querySelector('.header__search-cross').addEventListener('click', function () {
-    if (document.documentElement.scrollWidth <= 985) {
-      document.querySelector('.header__burger').style.opacity = '1';
-      document.querySelector('.header__picture').style.opacity = '1';
+  headerSearchCross.addEventListener('click', function () {
+    if (document.documentElement.scrollWidth <= 992) {
+      burger.style.display = 'block';
+      headerPicture.style.display = 'block';
     }
-    this.classList.remove('header__search--active');
-    document.querySelector('.header__search-input').classList.add('header__search--display');
     document.querySelector('.header__search-container').classList.remove('header__search-container--active');
-    document.querySelector('.header__search-input').classList.remove('header__search-input--active');
   });
 
   // scrollbar (hero menu)
@@ -32,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  let wrappers = document.querySelectorAll('.simplebar-content-wrapper');
+  wrappers.forEach(element => {
+    element.setAttribute("tabindex", -1);
+  });
+
   // select
 
   const gallerySelect = document.querySelector('.gallery__select');
@@ -41,20 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
     shouldSort: false,
   });
 
-  const burger = document.querySelector('.header__burger');
+
+  function toggleBurgerClasses() {
+    burgerMenu.classList.toggle('header__nav-container--active');
+    cross.classList.toggle('header__cross--active');
+    document.body.classList.toggle('overflow');
+  }
+
   const cross = document.querySelector('.header__cross');
   const burgerMenu = document.querySelector('.header__nav-container');
+  if (document.documentElement.scrollWidth <= 1199) {
+    let links = document.querySelectorAll('.header__link');
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        toggleBurgerClasses();
+      });
+    });
+  }
+
   burger.addEventListener('click', function () {
-    burger.classList.toggle('header__burger--inactive');
-    cross.classList.toggle('header__cross--active');
-    burgerMenu.classList.toggle('header__nav-container--active');
+    toggleBurgerClasses();
   });
 
   cross.addEventListener('click', function () {
     cross.classList.toggle('header__cross--active');
-    burger.classList.toggle('header__burger--inactive');
     burgerMenu.classList.toggle('header__nav-container--active');
+    document.body.classList.toggle('overflow');
   });
+
+
 
   // hero menu buttons 
 
@@ -63,19 +80,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let btn = this;
       let dropdown = this.parentElement.querySelector('.hero__container-dropdown');
 
-      document.querySelectorAll('.hero__list-button').forEach(listBtn => {
-        if (listBtn != btn) {
-          listBtn.classList.remove('hero__list-button--active');
-        }
-      });
-
       document.querySelectorAll('.hero__container-dropdown').forEach(container => {
         if (container != dropdown) {
           container.classList.remove('hero__container-dropdown--active');
         }
       })
       dropdown.classList.toggle('hero__container-dropdown--active');
-      btn.classList.toggle('hero__list-button--active');
     })
   })
 
@@ -87,6 +97,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // swipers
 
+
+  const heroSwiper = new Swiper('.hero__swiper', {
+    slidesPerView: 1,
+    speed: 2000,
+    autoplay: {
+      delay: 2000
+    },
+    effect: "fade",
+    allowTouchMove: false,
+  })
+
   const swiper1 = new Swiper('.swiper1', {
 
     direction: 'horizontal',
@@ -94,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerGroup: 1,
     spaceBetween: 100,
     breakpoints: {
-      1600: {
+      1601: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 50
@@ -104,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 2,
         spaceBetween: 34
       },
-      767: {
+      768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 38
@@ -134,12 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1,
         spaceBetween: 50
       },
-      1025: {
+      993: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 27
       },
-      739: {
+      755: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 34
@@ -154,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     pagination: {
       el: '.swiper2-pagination',
+      clickable: true,
     },
   });
 
@@ -180,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1,
         spaceBetween: 50
       },
-      739: {
+      586: {
         slidesPerView: 2,
         slidesPerGroup: 1,
         spaceBetween: 34
@@ -188,10 +210,17 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  // modal
+
+  const myModal = new HystModal({
+    linkAttributeName: "data-hystmodal",
+  });
+
   // tabs
 
-  document.querySelectorAll('.catalog__tabs-artist').forEach(function (tabsBtn) {
-    tabsBtn.addEventListener('click', function (e) {
+  const tabsBtn = document.querySelectorAll('.catalog__tabs-artist');
+  tabsBtn.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
       const path = e.currentTarget.dataset.path;
 
       document.querySelectorAll('.catalog__tabs-artist').forEach(function (btn) {
@@ -200,14 +229,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
       e.currentTarget.classList.add('catalog__tabs-artist--active');
 
-      document.querySelectorAll('.tabs-item').forEach(function (tabsBtn) {
-        tabsBtn.classList.remove('tabs-item--active')
+      document.querySelectorAll('.tabs-item').forEach(function (item) {
+        item.classList.remove('tabs-item--active')
       });
 
       document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tab) {
         tab.classList.add('tabs-item--active');
+      });
+    });
+  });
+
+  if (document.documentElement.scrollWidth <= 992) {
+    tabsBtn.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const item = document.querySelector('.tabs-item--active');
+        item.scrollIntoView();
       })
     });
+  };
+
+  document.querySelector('.contacts__form').addEventListener('submit', function () {
+    window.open('mailto:votencevaleksejj@gmail.com');
   });
 
   // map
@@ -273,6 +315,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+  tippy.setDefaultProps({
+    trigger: 'click',
+    theme: 'purple',
+  });
+
+  tippy('#projects__tooltip-one', {
+    content: 'Пример современных тенденций - современная методология разработки',
+  });
+
+  tippy('#projects__tooltip-two', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  });
+
+  tippy('#projects__tooltip-three', {
+    content: 'В стремлении повысить качество',
+  });
 });
 
 
