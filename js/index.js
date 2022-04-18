@@ -248,10 +248,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  document.querySelector('.contacts__form').addEventListener('submit', function () {
-    window.open('mailto:votencevaleksejj@gmail.com');
-  });
-
   // map
 
   ymaps.ready(init);
@@ -280,7 +276,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // validation
   const validation = new JustValidate('#contacts__form');
-
+  const form = document.querySelector('.contacts__form');
+  const name = document.querySelector('input[type="text"]');
+  const tel = document.querySelector('input[type="tel"]');
   validation
     .addField('#name', [
       {
@@ -308,6 +306,18 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage: 'Недопустимый формат'
       }
     ])
+    .onSuccess(() => {
+      let formData = [name.value, tel.value]
+      let response = fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      })
+      if (response.ok) {
+        let result = response.json();
+        alert(result.message);
+        form.reset();
+      }
+    })
 
   $('.accordion').accordion({
     collapsible: true,
