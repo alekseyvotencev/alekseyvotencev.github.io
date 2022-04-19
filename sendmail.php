@@ -16,8 +16,7 @@ $body = "
 <b>Телефон:</b> $tel<br><br>
 ";
 
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer();
 try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
@@ -50,3 +49,4 @@ else {$result = "error";}
 }
 
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+?>

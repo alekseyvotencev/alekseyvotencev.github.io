@@ -307,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     ])
     .onSuccess((event) => {
+      let formData = {name: name.value, phone: tel.value}
       console.log("Отправка запроса");
 
       event.preventDefault ? event.preventDefault() : event.returnValue = false;
@@ -328,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       req.onerror = function () { alert("Ошибка отправки запроса"); };
-      req.send(new FormData(event.target));
+      req.send(formData);
     });
 
   $('.accordion').accordion({
