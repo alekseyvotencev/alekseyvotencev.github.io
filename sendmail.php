@@ -1,34 +1,52 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    require 'php/Exception.php';
-    require 'php/PHPMailer.php';
-    require 'php/SMTP.php';
+require 'php/PHPMailer.php';
+require 'php/SMTP.php';
+require 'php/Exception.php';
 
-    $mail = new PHPMailer(true);
-    $mail->CharSet = 'UTF-8';
-    $mail->setLanguage('ru', 'php/');
-    $mail->IsHTML(true);
+$name = $_POST['name'];
+$tel = $_POST['tel'];
 
-    $mail->SetFrom('votencevaleksejj@gmail.com', 'Алексей Вотенцев');
-    $mail->addAddress('votencevaleksejj@gmail.com');
-    $mail->Subject = 'Обратный звонок';
+$title = "Заявка на обратный звонок";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $tel<br><br>
+";
 
-    $body = '<h1>Заявка на обратный звонок</h1>';
-    $body.='<p><strong>Имя</strong> ' .$_POST['name'].'</p>';
-    $body.='<p><strong>Телефон</strong> ' .$_POST['tel'].'</p>';
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    $mail->Body = $body;
+    $mail->Host       = 'smtp.yandex.ru'; 
+    $mail->Username   = 'votentseff@yandex.ru'; 
+    $mail->Password   = 'chpuwrqdglmncncp'; 
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('votentseff@yandex.ru', 'Алексей Вотенцев');
 
-    if(!$mail->send()) {
-        $message = 'Ошибка';
-    } else {
-        $message = 'Данные отправлены!';
-    }
+    
+    $mail->addAddress('votentseff@yandex.ru');  
 
-    $response = ['message' => $message];
 
-    header('Content-type: application/json');
-    echo json_encode($response);
-?>
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+}
+
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

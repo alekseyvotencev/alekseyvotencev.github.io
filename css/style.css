@@ -1217,14 +1217,12 @@ a {
     }
 
     .catalog__left-column {
-        /* margin-right: 50px; */
         width: 46.875%;
     }
 
     .catalog__artist-img {
         margin-bottom: 25px;
         max-width: 100%;
-        height: 100%;
     }
 
     .catalog__artist-name {
