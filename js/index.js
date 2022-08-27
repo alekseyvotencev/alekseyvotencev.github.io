@@ -307,29 +307,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     ])
     .onSuccess((event) => {
-      let formData = {name: name.value, phone: tel.value}
       console.log("Отправка запроса");
-
       event.preventDefault ? event.preventDefault() : event.returnValue = false;
-      var req = new XMLHttpRequest();
-      req.open('POST', '../sendmail.php', true);
-      req.onload = function () {
-        if (req.status >= 200 && req.status < 400) {
-          json = JSON.parse(this.response);
-          console.log(json);
-          if (json.result == "success") {
-
-            alert("Сообщение отправлено");
-          } else {
-
-            alert("Ошибка. Сообщение не отправлено");
-          }
-
-        } else { alert("Ошибка сервера. Номер: " + req.status); }
-      };
-
-      req.onerror = function () { alert("Ошибка отправки запроса"); };
-      req.send(formData);
     });
 
   $('.accordion').accordion({

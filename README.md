@@ -1,2 +1,3 @@
-# blanchard
-my course project in module 'basic layout'
+### https://alekseyvotencev.github.io/blanchard/
+
+Верстка сайта для художественной галереи
